@@ -10,6 +10,8 @@ COPY confd /etc/confd
 
 COPY scripts/install-and-run-389ds.sh /install-and-run-389ds.sh
 
+COPY scripts/generate_x_users_and_groups.sh /usr/bin/generate_x_users_and_groups.sh
+
 RUN  yum -y install curl hostname httpd authconfig nss-tools && \
      yum -y install java-1.8.0-openjdk-headless  openssl procps-pg coreutils && \
      yum -y install 389-ds-base.x86_64 openldap-clients && \ 
